@@ -31,6 +31,7 @@ body {
 }
 
 .scroll-down-btn {
+    opacity: 0.5;
     position: absolute;
     bottom: 20px;
     background-color: transparent;
@@ -42,6 +43,7 @@ body {
         
 h1 {
     font-size: 2.2em;
+    font-family: "Nunito", serif;
     margin: 0;
 }
 
@@ -145,7 +147,7 @@ h1 {
 
 #loading-screen p {
     font-size: 1rem;
-    opacity: 0.8;
+    opacity: 0.9;
 }
 
 .my-container {
@@ -236,7 +238,7 @@ h1 {
     opacity: 1; 
 }
 
-.container {
+ .container { 
     display: grid;
     grid-template-columns: repeat(5, 1fr); 
     gap: 20px;
@@ -250,16 +252,14 @@ h1 {
 
 .l-box {
     margin: 0 auto;
-    font-family: "Outfit", sans-serif;
+    font-family: "Nunito", serif;
     border-radius: 15px;
     display: flex;
-    flex-direction: column;
-    align-items: center; 
-    text-align: center; 
+    align-items: center;
+    text-align: left;
     border: none;
-    padding: 20px; 
-    width: 30vw;
-    max-width: 400px; 
+    padding: 10px;
+    width: 50vw;
     background-color: #141414; 
     transition: transform 0.3s ease, box-shadow 0.3s ease; 
 }
@@ -272,15 +272,14 @@ h1 {
     object-fit: cover; 
 }
 
-
 .leaderboard h3 {
     color: #fff;
-    margin: 0;
+    margin: 10;
     font-size: 18px;
 }
 
 .leaderboard p {
-    margin: 5px 0 0;
+    margin: 10;
     color: #fff;
     font-size: 14px;
 }
@@ -289,25 +288,33 @@ h1 {
     transform: scale(1.05);
 }
 
-.form__input {
-    padding: 20px;
-    font-family: "Nunito", serif;
-    width: 30vw;
-    background-color: #141414;
-    font-size: 16px;
+.search-container {
+    position: relative;
+  }
+
+  .form__input {
+    width: 500px;
+    padding: 20px 20px; 
     border: none;
     border-radius: 50px;
-    color: #fff;
-}
+    background-color: #141414;
+    color: inherit; 
+    font-size: 16px;
+    transition: width 0.3s ease; 
+  }
+
+  .form__input:focus {
+    width: 600px; 
+  }
 
 .box {
     font-family: "Nunito", serif;
-    width: 160px;
+    width: 150px;
     text-align: center;
     background: #141414;
     border: none;
     cursor: pointer;
-    border-radius: 15px;
+    border-radius: 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 10px;
     transition: 0.2s ease;
@@ -318,8 +325,8 @@ h1 {
 }
 
 .box img {
-    width: 160px;
-    height: 160px;
+    width: 150px;
+    height: 150px;
     object-fit: cover;
     border-radius: 5px;
 }
@@ -430,6 +437,121 @@ iframe {
 
 .image-item:hover .label {
     opacity: 1; 
+}
+
+.review-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    margin: auto;
+    color: #fff;
+}
+
+.review-box {
+    background-color: #141414; 
+    border: none;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    width: 250px; 
+    height: 200px; 
+    position: relative;
+    margin: 10px;
+    transition: 0.2s ease-in-out;
+}
+
+.review-box:hover {
+    transform: scale(1.1);
+}
+
+.review-box p {
+    font-size: 16px;
+    color: #fff; 
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+
+.review-box .bottom-left {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.review-box h6 {
+    margin: 0;
+    font-size: 14px;
+    color: #fff;
+}
+
+hr {
+    width: 50%;
+    height: 2px;
+    background-color: #fff;
+    border: none;
+    margin: 20px auto;
+}
+
+.container-hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20;
+}
+
+.text-box {
+    font-family: "Nunito", serif;
+    width: 500px;
+    padding: 20px;
+    border: none;
+    background-color: #141414;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    transition: 0.2s ease-in-out;
+}
+
+.text-box:hover {
+    transform: translateY(-10px);
+}
+
+.fade {
+    -webkit-animation: colorFade 5s infinite; 
+            animation: colorFade 5s infinite; 
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards; 
+  }
+  
+  @-webkit-keyframes colorFade {
+    0% { color: green; }
+    33.33% { color: blue; }
+    66.66% { color: yellow; }
+    100% { color: green; }
+  }
+  
+  @keyframes colorFade {
+    0% { color: green; }
+    33.33% { color: blue; }
+    66.66% { color: yellow; }
+    100% { color: green; }
+  }
+
+  a {
+    color: #0000ff;
+    text-decoration: none;
+    transition: 0.2s ease-in-out;
+}
+
+a:hover {
+    color: #3b3bff;
 }
 
 ::-webkit-scrollbar {

@@ -116,6 +116,19 @@
         </div>
 
         <div class="my-box">
+            <h2>Custom Tab Cloak</h2>
+            
+            <input class="sigma" type="text" id="websiteTitle" class="entertext1" placeholder="Enter Custom Title">
+            
+            <input class="sigma" type="text" id="faviconUrl" class="entertext2" placeholder="Enter Custom Image URL">
+
+            <button class="sigma" onclick="setCustomSettings()">Save Changes</button>
+
+            <button class="sigma" onclick="resetSettings()">Reset to Default</button>
+
+        </div>
+
+        <div class="my-box">
 
             <h2>Panic Key</h2>
             <input class="sigma" type="text" id="panicKey" placeholder="choose a key combination" readonly>
@@ -123,6 +136,14 @@
             <button class="sigma" onclick="saveSettings()">set panic key</button>
             <p id="success-panic" style="display: none;">success message here</p>
 
+        </div>
+
+        <div class="my-box">
+            <h2>Anti Close</h2>
+            <label>
+                Enable Or Disable
+                <input type="checkbox" id="toggleConfirmation">
+            </label>
         </div>
 
 
@@ -136,6 +157,11 @@
             </div>
 
         </div>
+
+        <div class="my-box">
+            <h2>Debug Mode</h2>
+            <button class="sigma" onclick="window.open('/debug/', '_blank')">Open</button>
+        </div>
     </div>
 
     <br>
@@ -146,5 +172,7 @@
     <script src="/storage/js/settings/cloak.js"></script>
     <script src="/storage/js/settings/data.js"></script>
     <script src="/storage/js/settings/settings.js"></script>
+    <script src="/storage/js/settings/anticlose.js"></script>
+    <script src="/storage/js/settings/customcloak.js"></script>
     </body>
 </html>

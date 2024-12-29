@@ -1,76 +1,47 @@
 <html>
-    <head>
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-TFZ72L5FPQ"></script>
-        <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TFZ72L5FPQ"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-        gtag('config', 'G-TFZ72L5FPQ');
-        </script>
-        <title>BrunysIXLWork</title>
-        <link rel="stylesheet" href="/storage/css/main.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-        <link rel="icon" type="image/x-icon" href="/storage/images/favicon.ico">
-    </head>
-    <body>
-        <div id="particles-js"></div>
+    gtag('config', 'G-TFZ72L5FPQ');
+    </script>
+    <title>BrunysIXLWork | Launcher</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/storage/css/launcher.css">
+    <link rel="icon" type="image/x-icon" href="/storage/images/favicon.ico">
+    <meta property="og:title" content="BrunysIXLWork | Launcher">
+    <meta property="og:description" content="The place where it all happens">
+    <meta property="og:image" content="/static/images/logo.png">
+    <meta property="og:image:width" content="100">
+    <meta property="og:image:height" content="100">
+    <meta property="og:url" content="https://brunysixlwork.site">
+    <meta name="theme-color" content="#0d0d0d">
+    <meta name="msapplication-TileColor" content="#0d0d0d">
+</head>
 
-    <div id="loading-screen">
-        <div class="dots">
-            <div class="dot"></div>
-            <div class="dot"></div>
-            <div class="dot"></div>
+<body>
+    <div class="tab-bar">
+        <span><a href="/"><h3><img src="/storage/images/logo.png" alt="Image" class="left-image">BRUNYSIXLWORK</h3></a></span>
+        <div class="buttons">
+            <button onclick="goBack()"><i class="fa fa-arrow-left"></i></button>
+            <button onclick="goForward()"><i class="fa fa-arrow-right"></i></button>
+            <button onclick="reloadIframe()"><i class="fa fa-refresh"></i></button>
+            <button style="margin-right: 10px;" onclick="toggleFullscreen()"><i class="fa fa-expand"></i></button>
         </div>
-        <p>Loading, please wait...</p>
     </div>
 
-    <section class="banner">
-        <h1>BrunysIXLWork</h1>
-        <p id="dynamicParagraph">gyatt</p>
+    <div class="iframe-container">
+        <iframe id="proxyIframe" src="" allow="fullscreen"></iframe>
+    </div>
 
-        <form id="uv-form">
-            <input id="uv-search-engine" value="https://www.google.com/search?q=%s" type="hidden"/> 
-            <input id="uv-address" type="text" placeholder="Search Google or type an URL" class="form__input"/>
-          </form>
-          <div class="desc left-margin">
-            <p id="uv-error"></p>
-            <pre id="uv-error-code"></pre>
-          </div>
-</section>
-
-    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
-    <script src="/storage/js/loadingscreen.js"></script>
-    <script src="/storage/js/settings/particles.js"></script>
+    <script src="/static/launcher.js"></script>
     <script src="/storage/js/settings/cloak.js"></script>
     <script src="/storage/js/settings/data.js"></script>
     <script src="/storage/js/settings/settings.js"></script>
-    <script src="/static/uv/uv.bundle.js" defer></script>
-    <script src="/static/uv/uv.config.js" defer></script>
-    <script src="/static/register-sw.js" defer></script>
-    <script src="/static/search.js" defer></script>
-    <script src="/static/index.js" defer></script>
-    <script>
-        const phrases = [
-            "B.I.W best unblocked games ever!",
-            "https://dsc.gg/bruny",
-            "Made by Brunys",
-            "Also try Jade Proxy!",
-            "still active despite being inactive for months ¯\\_(ツ)_/¯",
-            "Roblox should now work my eskibidi sigmets",
-            "IVE EDGED TO BRUNY -frogiee1",
-            "iris has voice revealed once -iris"
-        ];
-
-        const paragraph = document.getElementById('dynamicParagraph');
-
-        function changeText() {
-            const randomPhrase = phrases[Math.floor(Math.random() * phrases.length)];
-            paragraph.textContent = randomPhrase;
-        }
-
-        paragraph.addEventListener('click', changeText);
-        window.onload = changeText;
-    </script>
-    </body>
+    <script src="/storage/js/settings/anticlose.js"></script>
+    <script src="/storage/js/settings/customcloak.js"></script>
+</body>
 </html>

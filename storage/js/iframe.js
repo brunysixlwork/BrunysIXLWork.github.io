@@ -44,28 +44,12 @@ function refreshIframe() {
     console.log('Iframe refreshed');
 }
 
-function openInNewTab() {
-    const iframe = document.getElementById('myIframe');
-    window.open(iframe.src, '_blank');
-    console.log('Iframe source opened in new tab');
-}
-
-function activateScript() {
-    const script = document.createElement('script');
-    script.src = 'https://cdn.jsdelivr.net/npm/@widgetbot/crate@3';
-    script.async = true;
-    script.defer = true;
-    script.onload = () => {
-        new Crate({
-            server: '1271606448878780478',
-            channel: '1297604471307763762' 
-        });
-    };
-    document.body.appendChild(script);
-    console.log('Script activated');
-}
-
-function goToAnotherPage() {
-    window.location.href = "/leaderboards.html";
-    console.log('Navigated to leaderboards page');
-}
+function goBack() {
+    
+    if (document.referrer) {
+      window.location.href = document.referrer;
+    } else {
+      
+      window.location.href = '/';
+    }
+  }

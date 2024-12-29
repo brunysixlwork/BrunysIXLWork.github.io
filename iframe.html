@@ -17,7 +17,7 @@
         <meta property="og:url" content="https://brunysixlwork.site">
         <meta name="theme-color" content="#0d0d0d">
         <meta name="msapplication-TileColor" content="#0d0d0d">
-        <link rel="stylesheet" href="/storage/css/main.css">
+        <link rel="stylesheet" href="/storage/css/launcher.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
         <link rel="icon" type="image/x-icon" href="/storage/images/favicon.ico">
     </head>
@@ -33,31 +33,26 @@
         <p>Loading, please wait...</p>
     </div>
 
-    <nav class="navbar">
-        <div class="left-nav">
-            <a href="/">
-                <img src="/storage/images/logo.png" alt="Logo" class="logo">
-                <h3>BRUNYSIXLWORK</h3>
+
+    <div class="tab-bar">
+        <span>
+            <a href="javascript:void(0);" onclick="goBack()">
+              <h3>
+                <img src="/storage/images/logo.png" alt="Image" class="left-image">
+                BRUNYSIXLWORK
+              </h3>
             </a>
+          </span>
+        <div class="buttons">
+            <button onclick="goBack()"><i class="fa fa-arrow-left"></i></button>
+            <button onclick="goForward()"><i class="fa fa-arrow-right"></i></button>
+            <button onclick="refreshIframe()"><i class="fa fa-refresh"></i></button>
+            <button style="margin-right: 10px;" onclick="toggleFullscreen()"><i class="fa fa-expand"></i></button>
         </div>
+    </div>
 
-        <div class="right-nav">
-            <a href="/games.html"><i class="fa-solid fa-gamepad"></i></a>
-            <a href="/apps.html"><i class="fa-solid fa-table-cells"></i></a>
-            <a href="/extra.html"><i class="fa-solid fa-plus"></i></a>
-            <a href="/settings.html"><i class="fa-solid fa-gear"></i></a>
-        </div>
-    </nav>
-
-    <div style="margin-top: 80px;" class="iframe-container">
-        <iframe id="myIframe" title="Iframe Example"></iframe>
-        <div class="overlay-buttons">
-            <button onclick="toggleFullscreen()"><i class="fas fa-expand"></i></button>
-            <button onclick="refreshIframe()"><i class="fas fa-sync-alt"></i></button>
-            <button onclick="openInNewTab()"><i class="fas fa-external-link-alt"></i></button>
-            <button onclick="activateScript()"><i class="fa-brands fa-discord"></i></button>
-            <button onclick="goToAnotherPage()"><i class="fa-solid fa-trophy"></i></button>
-        </div>
+    <div class="iframe-container">
+        <iframe id="myIframe" src="" allow="fullscreen"></iframe>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
@@ -67,5 +62,8 @@
     <script src="/storage/js/settings/data.js"></script>
     <script src="/storage/js/settings/settings.js"></script>
     <script src="/storage/js/iframe.js"></script>
+    <script src="/storage/js/loadingscreen.js"></script>
+    <script src="/storage/js/settings/anticlose.js"></script>
+    <script src="/storage/js/settings/customcloak.js"></script>
     </body>
 </html>
